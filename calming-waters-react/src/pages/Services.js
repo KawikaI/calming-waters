@@ -1,15 +1,14 @@
 import React from "react";
+import Navbar from "../components/Navbar"; 
 
 const Services = () => {
   return (
-    <div className="container">
-      <h2>Our Services</h2>
-      <ul>
-        <li>✔ Individual Therapy</li>
-        <li>✔ Couples Counseling</li>
-        <li>✔ Anxiety & Stress Management</li>
-        <li>✔ Depression Support</li>
-      </ul>
+    <div>
+      <Navbar />  {/* ✅ Navbar appears on every page */}
+      <div className="container mt-5">
+        <h2>Our Services</h2>
+        <p>Details about different therapy services offered.</p>
+      </div>
     </div>
   );
 };
