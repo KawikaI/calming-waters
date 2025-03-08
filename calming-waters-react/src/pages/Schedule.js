@@ -44,8 +44,10 @@ const Schedule = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <div className="container mt-5">
-      <Navbar /> {/* Keep Navbar for navigation */}
+    
       <h2 className="text-center">Schedule an Appointment</h2>
       <form onSubmit={handleSubmit}>
         {/* Name */}
@@ -80,6 +82,7 @@ const Schedule = () => {
         <button type="submit" className="btn btn-primary mt-3">Submit</button>
       </form>
     </div>
+    </>
   );
 };
 
