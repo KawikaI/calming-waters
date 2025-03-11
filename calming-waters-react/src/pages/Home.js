@@ -40,23 +40,7 @@ const Home = () => {
     </div>
 </section>
 
-      <section id="services" className="container mt-5">
-        <h2 className="text-center">Our Services</h2>
-        <div className="row">
-          <div className="col-md-4">
-            <h3>Individual Therapy</h3>
-            <p>Personalized one-on-one sessions.</p>
-          </div>
-          <div className="col-md-4">
-            <h3>Couples Counseling</h3>
-            <p>Helping relationships grow stronger.</p>
-          </div>
-          <div className="col-md-4">
-            <h3>Mindfulness Coaching</h3>
-            <p>Learn techniques to manage stress.</p>
-          </div>
-        </div>
-      </section>
+
 
      
 
