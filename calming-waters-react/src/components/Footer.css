@@ -45,12 +45,14 @@
 .footer-logo {
   flex: 1;
   display: flex;
-  justify-content: flex-end; /* Moves logo closer to the center */
-  align-items: center; /* Ensures vertical alignment */
+  justify-content: center; /* Center logo */
+  align-items: center; /* Ensure vertical alignment */
+  padding-left: 30px; /* Move logo slightly left */
 }
 
+/* Increase Logo Size */
 .business-logo {
-  max-width: 150px; /* Adjusted size */
+  max-width: 170px; /* Increase size */
   height: auto;
   border-radius: 15px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);

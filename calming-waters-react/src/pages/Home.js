@@ -15,11 +15,12 @@ import PricingInfo from "../components/PricingInfo";
 
 const Home = () => {
   const specialties = [
+    , "⭐Trauma and PTSD⭐", "⭐Depression⭐", "⭐Anxiety⭐","Obsessive-Compulsive (OCD)",
     "Anger Management", "Borderline Personality (BPD)", "Coping Skills", "Divorce", "Domestic Abuse", 
 "Domestic Violence", "Dual Diagnosis", "Emotional Disturbance", "Family Conflict", "Grief",
-"Life Transitions", "Obsessive-Compulsive (OCD)", "Parenting", "Peer Relationships", 
+"Life Transitions", "Parenting", "Peer Relationships", 
 "Relationship Issues", "Self Esteem", "Self-Harming", "Sexual Abuse", "Stress", 
-"Suicidal Ideation", "Transgender", "Veterans", "*Trauma and PTSD*", "*Depression*", "*Anxiety*"
+"Suicidal Ideation", "Transgender", "Veterans"
   ];
 
   return (
