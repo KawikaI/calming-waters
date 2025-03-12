@@ -19,7 +19,7 @@ const Home = () => {
 "Domestic Violence", "Dual Diagnosis", "Emotional Disturbance", "Family Conflict", "Grief",
 "Life Transitions", "Obsessive-Compulsive (OCD)", "Parenting", "Peer Relationships", 
 "Relationship Issues", "Self Esteem", "Self-Harming", "Sexual Abuse", "Stress", 
-"Suicidal Ideation", "Transgender", "Veterans"
+"Suicidal Ideation", "Transgender", "Veterans", "*Trauma and PTSD", "*Depression", "*Anxiety"
   ];
 
   return (
@@ -28,9 +28,9 @@ const Home = () => {
       <Navbar />
 
       <header className="bg-primary text-white text-center py-5">
-        <h1>Welcome to calm waters and smooth sailing</h1>
-        <p>Let the tide of life carry you, but never let it pull you under.</p>
-      </header>
+  <h1 className="header-title">Welcome to calm waters and smooth sailing</h1>
+  <p className="header-subtitle">Let the tide of life carry you, but never let it pull you under.</p>
+</header>
 
       <section className="profile-section container mt-5 d-flex align-items-center justify-content-center">
     {/* Profile Picture Placeholder */}
@@ -50,7 +50,7 @@ const Home = () => {
 
 {/* 🔹 Add Office Gallery Here */}
 <div className="container mt-5">
-        <h2 className="text-center">Our Office Space</h2>
+        <h2 className="text-center">My Office!</h2>
         <OfficeGallery />
       </div>
 

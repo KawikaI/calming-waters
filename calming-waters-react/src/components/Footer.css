@@ -24,7 +24,7 @@
   }
   
   .schedule-btn {
-    background: #f39c12;
+    background: #b3e3ec;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
@@ -34,7 +34,7 @@
   }
   
   .schedule-btn:hover {
-    background: #e67e22;
+    background: #9a9998;
   }
   
   /* Location Section */
