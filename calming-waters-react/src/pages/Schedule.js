@@ -1,18 +1,26 @@
 import React, { useState } from "react";
-import { database } from "../firebaseConfig"; // Adjusted to match your file location
+import { database } from "../firebaseConfig"; // Ensure correct Firebase import
 import { ref, push } from "firebase/database";
-import Navbar from "../components/Navbar"; // Ensure Navbar is correctly imported
+import Navbar from "../components/Navbar"; // Navbar
+import Select from "react-select"; // New import for custom dropdown
+import "./Schedule.css"; // Import CSS for styling
+
+const paymentOptions = [
+  { value: "insurance", label: "Insurance" },
+  { value: "self-pay", label: "Self-Pay" },
+  { value: "HSA", label: "HSA/FSA" },
+  { value: "cash", label: "Cash Payment" },
+];
 
 const Schedule = () => {
-  // 🔹 State for form inputs
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [preferredTime, setPreferredTime] = useState("");
-  const [paymentType, setPaymentType] = useState("");
+  const [paymentType, setPaymentType] = useState(null);
 
-  // 🔹 Handle form submission
+  // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -22,21 +30,18 @@ const Schedule = () => {
       phone,
       message,
       preferredTime,
-      paymentType
+      paymentType: paymentType ? paymentType.value : "",
     };
 
-    // 🔹 Push data to Firebase Realtime Database
     push(ref(database, "appointments"), appointmentData)
       .then(() => {
         alert("Appointment request sent successfully!");
-        
-        // Reset form fields
         setName("");
         setEmail("");
         setPhone("");
         setMessage("");
         setPreferredTime("");
-        setPaymentType("");
+        setPaymentType(null);
       })
       .catch((error) => {
         console.error("Error saving appointment:", error);
@@ -45,43 +50,65 @@ const Schedule = () => {
 
   return (
     <>
-    <Navbar />
-    <div className="container mt-5">
-    
-      <h2 className="text-center">Schedule an Appointment</h2>
-      <form onSubmit={handleSubmit}>
-        {/* Name */}
-        <label>Name</label>
-        <input type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)} required />
+      <Navbar />
+      <div className="schedule-container">
+        <form className="schedule-form" onSubmit={handleSubmit}>
+          <h2>Schedule an Appointment</h2>
 
-        {/* Email */}
-        <label>Email</label>
-        <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          {/* Name */}
+          <input 
+            type="text" 
+            placeholder="Full Name" 
+            value={name} 
+            onChange={(e) => setName(e.target.value)} 
+            required 
+          />
 
-        {/* Phone */}
-        <label>Phone</label>
-        <input type="tel" className="form-control" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+          {/* Email */}
+          <input 
+            type="email" 
+            placeholder="Email Address" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            required 
+          />
 
-        {/* Message */}
-        <label>Message</label>
-        <textarea className="form-control" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+          {/* Phone */}
+          <input 
+            type="tel" 
+            placeholder="Phone Number" 
+            value={phone} 
+            onChange={(e) => setPhone(e.target.value)} 
+            required 
+          />
 
-        {/* Preferred Date & Time */}
-        <label>Preferred Date & Time</label>
-        <input type="datetime-local" className="form-control" value={preferredTime} onChange={(e) => setPreferredTime(e.target.value)} />
+          {/* Message */}
+          <textarea 
+            placeholder="Your Message" 
+            value={message} 
+            onChange={(e) => setMessage(e.target.value)}
+          ></textarea>
 
-        {/* Payment Type */}
-        <label>Insurance Type / Payment</label>
-        <select className="form-control" value={paymentType} onChange={(e) => setPaymentType(e.target.value)}>
-          <option value="">Select an option</option>
-          <option value="insurance">Insurance</option>
-          <option value="self-pay">Self-Pay</option>
-        </select>
+          {/* Preferred Date & Time */}
+          <input 
+            type="datetime-local" 
+            value={preferredTime} 
+            onChange={(e) => setPreferredTime(e.target.value)} 
+          />
 
-        {/* Submit Button */}
-        <button type="submit" className="btn btn-primary mt-3">Submit</button>
-      </form>
-    </div>
+          {/* Smooth Payment Type Dropdown */}
+          <Select 
+            options={paymentOptions} 
+            value={paymentType} 
+            onChange={setPaymentType} 
+            placeholder="Select an Insurance Type / Payment"
+            className="custom-select"
+          />
+
+          {/* Submit Button */}
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </>
   );
 };

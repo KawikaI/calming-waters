@@ -1,5 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar"; // Ensure correct path
+import "../components/OfficeGallery.css";
+
+
 
 const About = () => {
   return (
