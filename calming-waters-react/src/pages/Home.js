@@ -19,7 +19,7 @@ const Home = () => {
 "Domestic Violence", "Dual Diagnosis", "Emotional Disturbance", "Family Conflict", "Grief",
 "Life Transitions", "Obsessive-Compulsive (OCD)", "Parenting", "Peer Relationships", 
 "Relationship Issues", "Self Esteem", "Self-Harming", "Sexual Abuse", "Stress", 
-"Suicidal Ideation", "Transgender", "Veterans", "*Trauma and PTSD", "*Depression", "*Anxiety"
+"Suicidal Ideation", "Transgender", "Veterans", "*Trauma and PTSD*", "*Depression*", "*Anxiety*"
   ];
 
   return (
@@ -27,22 +27,22 @@ const Home = () => {
       {/* 🔹 Replacing the manual navbar with the imported Navbar component */}
       <Navbar />
 
-      <header className="bg-primary text-white text-center py-5">
-  <h1 className="header-title">Welcome to calm waters and smooth sailing</h1>
-  <p className="header-subtitle">Let the tide of life carry you, but never let it pull you under.</p>
+      <header className="text-white text-center py-5 App-header">
+  <h1 className="header-title">Calming Waters Counselling</h1>
+  <p className="header-subtitle">Let this be your guide to calm waters and inner peace</p>
 </header>
 
-      <section className="profile-section container mt-5 d-flex align-items-center justify-content-center">
+<section className="profile-section container mt-5 d-flex align-items-center justify-content-center">
     {/* Profile Picture Placeholder */}
     <div className="profile-pic">
-    <img src="/calming-waters-pics/place.jpeg" alt="Therapist Profile" />
+        <img src="/calming-waters-pics/profile.jpeg" alt="Therapist Profile" />
     </div>
 
     {/* Skills Box */}
     <div className="skills-box">
         <h3>Welcome</h3>
         <p>
-        Life can throw us some difficult challenges and so many struggle with navigating through those challenges. It can sometimes feel like there is no light at the end of the tunnel and it is during these times, we all could use extra support. It also takes courage to reach out for help. I believe that everyone has the strength to get through life's toughest challenges with the right tools and support. That is why I am here to provide a safe, supportive environment, listen to you, and work with you to help find solutions and help you get back to living life.
+            Life can throw us some difficult challenges and so many struggle with navigating through those challenges. It can sometimes feel like there is no light at the end of the tunnel and it is during these times, we all could use extra support. It also takes courage to reach out for help. I believe that everyone has the strength to get through life's toughest challenges with the right tools and support. That is why I am here to provide a safe, supportive environment, listen to you, and work with you to help find solutions and help you get back to living life.
         </p>
     </div>
 </section>
@@ -50,7 +50,7 @@ const Home = () => {
 
 {/* 🔹 Add Office Gallery Here */}
 <div className="container mt-5">
-        <h2 className="text-center">My Office!</h2>
+        <h2 className="text-center">Come in!</h2>
         <OfficeGallery />
       </div>
 

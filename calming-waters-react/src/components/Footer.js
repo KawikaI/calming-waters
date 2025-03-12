@@ -11,20 +11,33 @@ const Footer = () => {
         {/* Left Section: Contact & Schedule */}
         <div className="footer-info">
           <h4>Contact</h4>
-          <p>📞 (406) 225-0746</p>
-          <p>✉️ milac.calmingwaters@gmail.com</p>
+          
+          {/* Phone Number */}
+          <div className="contact-item">
+            <span className="material-symbols-outlined">call</span>
+            <p>(406) 225-0746</p>
+          </div>
 
-          {/* Schedule Button Moved Here */}
+          {/* Email */}
+          <div className="contact-item">
+            <span className="material-symbols-outlined">mail</span>
+            <p>milac.calmingwaters@gmail.com</p>
+          </div>
+
+          {/* Schedule Button */}
           <div className="footer-schedule">
             <Link to="/schedule" className="schedule-btn">
-              📅 Schedule an Appointment
+              <span className="material-symbols-outlined">calendar_month</span>
+              Schedule an Appointment
             </Link>
           </div>
         </div>
 
         {/* Center Section: Location Info */}
         <div className="footer-location">
-          <h4>Location</h4>
+          <h4>
+            <span className="material-symbols-outlined">pin_drop</span> Location
+          </h4>
           <p>Calming Waters Counseling</p>
           <p>314 1st Street East</p>
           <p>Suite 207</p>
@@ -33,8 +46,8 @@ const Footer = () => {
 
         {/* Right Section: Logo */}
         <div className="footer-logo">
-  <img src="/calming-waters-pics/logo.png" alt="Business Logo" className="business-logo" />
-</div>
+          <img src="/calming-waters-pics/logo.png" alt="Business Logo" className="business-logo" />
+        </div>
       </div>
 
       {/* Bottom Section: Copyright */}

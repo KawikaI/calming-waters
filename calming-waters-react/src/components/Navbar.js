@@ -16,7 +16,12 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid"> {/* Change this from "container" to "container-fluid" */}
-    <a className="navbar-brand" href="#">Calming Waters</a>
+    {/* Logo & Brand */}
+    <a className="navbar-brand d-flex align-items-center" href="#">
+          <img src="/calming-waters-pics/logo.png" alt="Logo" className="nav-logo" />
+          Calming Waters
+        </a>
+    <a className="navbar-brand" href="#"></a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span className="navbar-toggler-icon"></span>
     </button>

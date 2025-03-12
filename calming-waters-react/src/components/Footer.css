@@ -1,66 +1,85 @@
 .footer {
-    background: #2c3e50;
-    color: white;
-    padding: 20px 0;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  /* Contact & Schedule Section */
-  .footer-info {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .footer-schedule {
-    margin-top: 15px;
-  }
-  
-  .schedule-btn {
-    background: #b3e3ec;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-  }
-  
-  .schedule-btn:hover {
-    background: #9a9998;
-  }
-  
-  /* Location Section */
-  .footer-location {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .footer-logo {
-    flex: 1; /* Ensures the section takes space */
-    display: flex;
-    justify-content: center; /* Moves the logo to the center of its space */
-    align-items: center; /* Ensures vertical alignment */
-    padding-right: 50px; /* Adjust as needed for fine-tuning */
-  }
-  
-  .business-logo {
-    max-width: 180px; /* Adjust size as needed */
-    height: auto;
-    border-radius: 15px; /* Smooth rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  }
-  
-  /* Copyright */
-  .footer-copyright {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 10px;
-  }
+  background: #2c3e50;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensures all sections align correctly */
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Ensure Contact & Location Text Aligns Correctly */
+.footer-info,
+.footer-location {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Keeps content aligned at the top */
+}
+
+.footer-location {
+  text-align: center; /* Center location text */
+}
+
+/* Ensure contact icons align with text */
+.contact-item {
+  display: flex;
+  align-items: center; /* Ensures icons and text align */
+  gap: 8px; /* Adjust spacing between icon and text */
+  margin-top: 5px;
+}
+
+/* Ensure Material Icons are the correct size */
+.contact-item .material-symbols-outlined {
+  font-size: 22px; /* Adjust icon size */
+  color: white;
+}
+
+/* Fix Footer Logo Alignment */
+.footer-logo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Moves logo closer to the center */
+  align-items: center; /* Ensures vertical alignment */
+}
+
+.business-logo {
+  max-width: 150px; /* Adjusted size */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Schedule Button */
+.footer-schedule {
+  margin-top: 15px;
+}
+
+.schedule-btn {
+  background: #b3e3ec;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.schedule-btn:hover {
+  background: #9a9998;
+}
+
+/* Copyright */
+.footer-copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}

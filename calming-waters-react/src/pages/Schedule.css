@@ -1,13 +1,52 @@
+/* Apply sky blue background to the Schedule page */
+.schedule-container {
+    background-color: #D6E6F2; /* Sky Blue */
+    padding: 50px 0;
+    min-height: 100vh; /* Ensures full-page coverage */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center the form and set a max-width */
+.schedule-form {
+    max-width: 550px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Style form inputs */
+.schedule-form input,
+.schedule-form textarea,
+.schedule-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Improve placeholder visibility */
+.schedule-form input::placeholder,
+.schedule-form textarea::placeholder {
+    color: #888;
+    font-size: 14px;
+}
+
 /* Disabled input styling (for DateTime) */
 .schedule-form input:disabled {
     background: #f5f5f5;
     color: #888;
-  }
-  
-  /* Submit button */
-  .schedule-form button {
+}
+
+/* Submit button */
+.schedule-form button {
     width: 100%;
-    background-color: #3498db;
+    background-color: #3498db; /* Vibrant Blue */
     color: white;
     padding: 12px;
     font-size: 16px;
@@ -15,30 +54,21 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s;
-  }
-  
-  .schedule-form button:hover {
-    background-color: #2980b9;
-  }
-  
-  /* Add soft background for the whole form section */
-  .schedule-container {
-    background: linear-gradient(to right, #f7f7f7, #ffffff);
-    padding: 50px 0;
-    display: flex;
-    justify-content: center;
-  }
+}
 
- /* Space out the dropdown and submit button */
+.schedule-form button:hover {
+    background-color: #217dbb; /* Slightly Darker Blue */
+}
+
+/* Space between dropdown and submit button */
 .custom-select {
-    margin-top: 8px; /* Keeps top spacing */
-    margin-bottom: 20px; /* Adds spacing before the submit button */
-  }
-  
-  /* Optionally, space out all form elements */
-  .schedule-form input,
-  .schedule-form textarea,
-  .schedule-form .custom-select {
-    margin-bottom: 15px; /* Adds consistent spacing */
-  }
-  
+    margin-bottom: 20px !important; /* Ensures space between dropdown and button */
+}
+
+/* Ensure spacing for all form elements */
+.schedule-form input,
+.schedule-form textarea,
+.schedule-form .custom-select,
+.schedule-form button {
+    margin-bottom: 15px;
+}
