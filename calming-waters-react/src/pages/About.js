@@ -45,7 +45,7 @@ const About = () => {
           <p>
             I enjoy working with adolescents, adults, and families on the reservation. I have experience with trauma, self-harm, anxiety, depression, suicidal ideation, and grief and loss. I am an ally and work with the LGBTQIA community.</p>
             <p>
-              
+
             I enjoy working with people and helping them through their darkest days, while celebrating their accomplishments and times of happiness! Therapy is not a one size fits all and I work toward individualizing my therapeutic approaches to meet the needs of each person.
             </p>
           
