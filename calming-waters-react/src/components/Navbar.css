@@ -1,0 +1,56 @@
+.navbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar li {
+    display: inline;
+  }
+  
+  .navbar {
+    background-color: #E8A0BF !important; /* Force Soft Orchid Pink */
+    height: 80px; /* Adjust height */
+    padding: 10px 20px; /* Add spacing */
+    display: flex;
+    align-items: center; /* Vertically align items */
+  }
+  
+  .navbar a {
+    
+    font-size: 24px; /* Adjust size */
+    color: #333; /* Dark Gray for readability */
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #5C5470; /* Slightly darker muted purple */
+  }
+  
+  .navbar-brand {
+    font-size: 24px; /* Adjust text size */
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Align text and logo */
+  }
+  
+  .navbar-nav {
+    font-size: 18px; /* Adjust link size */
+  }
+  
+  .nav-logo {
+    width: 50px;  /* Adjust size */
+    height: auto;  /* Maintain aspect ratio */
+    margin-right: 10px;  /* Space between logo and text */
+  }

@@ -1,7 +1,10 @@
 .footer {
+  position: relative; /* Ensure it's part of normal document flow */
   background: #2c3e50;
   color: white;
   padding: 20px 0;
+  padding-bottom: 50px;
+
 }
 
 .footer-container {

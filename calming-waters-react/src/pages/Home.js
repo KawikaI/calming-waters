@@ -6,8 +6,8 @@ import OfficeGallery from "../components/OfficeGallery"; // Import OfficeGallery
 import "../components/OfficeGallery.css"; // Import styles
 import Footer from "../components/Footer"; // Ensure correct path
 import PricingInfo from "../components/PricingInfo";
-
-
+import "./Specialties.css";
+import "./PricingInfo.css";
 
 
 

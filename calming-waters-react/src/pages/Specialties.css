@@ -1,0 +1,28 @@
+
+.specialties-box {
+    background-color: #f8f9fa; /* Light grey background */
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 60px;
+    margin-bottom: 150px !important; /* Force larger space */
+    text-align: center;
+  }
+  
+  /* Styling for each specialty tag */
+  .specialty-badge {
+    background-color: #D3D3D3; /* Soft orange */
+    color: rgb(000, 0, 0);
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    display: inline-block;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+  }
+  
+  /* Add hover effect */
+  .specialty-badge:hover {
+    transform: scale(1.1);
+    background-color: #C8C8C8; /* Slightly darker shade */
+  }
