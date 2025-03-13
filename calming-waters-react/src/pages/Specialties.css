@@ -7,6 +7,8 @@
     margin-bottom: 150px !important; /* Force larger space */
     text-align: center;
   }
+
+  
   
   /* Styling for each specialty tag */
   .specialty-badge {
@@ -25,4 +27,13 @@
   .specialty-badge:hover {
     transform: scale(1.1);
     background-color: #C8C8C8; /* Slightly darker shade */
+  }
+
+  @media (max-width: 768px) {
+    .specialties-box {
+      max-height: 300px; /* Limits height */
+      overflow-y: auto; /* Enables vertical scrolling */
+      padding: 15px;
+      border-radius: 12px;
+    }
   }

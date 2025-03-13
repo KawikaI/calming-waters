@@ -88,3 +88,56 @@
   font-size: 14px;
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stacks items vertically */
+    text-align: center;
+    align-items: center;
+    padding: 0px;
+  }
+
+  /* Center contact section */
+  .footer-info {
+    order: 1; /* Keeps Contact at the top */
+    width: 100%;
+    text-align: center; /* Centers all text */
+  }
+
+  /* Centering individual contact items */
+  .contact-item {
+    justify-content: center; /* Centers icons and text */
+  }
+
+  /* Center location text */
+  .footer-location {
+    order: 2;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Move logo to the bottom */
+  .footer-logo {
+    order: 3;
+    padding-left: 0;
+  }
+
+  .business-logo {
+    max-width: 200px;
+  }
+
+  /* Center schedule button */
+  .footer-schedule {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .schedule-btn {
+    position: relative;
+    top: -20px; /* Moves button UP */
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+}

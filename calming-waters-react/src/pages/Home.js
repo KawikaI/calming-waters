@@ -13,6 +13,8 @@ import "./PricingInfo.css";
 
 
 
+
+
 const Home = () => {
   const specialties = [
     , "⭐Trauma and PTSD⭐", "⭐Depression⭐", "⭐Anxiety⭐","Obsessive-Compulsive (OCD)",

@@ -132,3 +132,38 @@ body {
   justify-content: space-between; /* ⬅️ Ensures proper spacing */
 }
 
+/* ============== */
+/* Mobile Styling */
+/* ============== */
+@media (max-width: 768px) {
+  /* Stack image & text in a column */
+  .profile-section {
+    flex-direction: column; /* Stacks elements */
+    text-align: center;
+    padding: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .profile-pic img {
+      width: 100%; /* Makes sure it scales within the container */
+      max-width: 250px; /* Limits size */
+      height: auto; /* Keeps aspect ratio */
+      display: block;
+      margin: 0 auto; /* Centers the image */
+      border-radius: 15px; /* Soft rounded corners */
+      object-fit: contain; /* Ensures it fully fits */
+    }
+  }
+
+  /* Center text box and prevent overflow */
+  .skills-box {
+    width: 90%; /* Keeps text inside screen edges */
+    max-width: 450px; /* Prevents text box from stretching */
+    text-align: center;
+    margin: 20px auto; /* Adds space between text & image */
+  }
+  
+}
+
+  
+
