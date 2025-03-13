@@ -30,12 +30,12 @@
   }
 }
 
-/* Styling for the large specialties box */
 .specialties-box {
   background-color: #f8f9fa; /* Light grey background */
   border-radius: 20px;
   padding: 40px;
   margin-top: 50px;
+  margin-bottom: 150px; /* ⬆️ Increase bottom margin more */
   text-align: center;
 }
 
@@ -273,3 +273,16 @@ body {
 }
 
 
+/* Ensure the page expands */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ⬅️ Ensures proper spacing */
+}
+
+/* Push footer to the bottom */
+.footer {
+  margin-top: auto;
+  padding-top: 60px; /* ⬆️ Add extra padding above the footer */
+}
