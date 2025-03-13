@@ -1,5 +1,12 @@
 {
   "hosting": {
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "https://calmingwaterscounselling.com",
+        "type": 301
+      }
+    ],
     "public": "calming-waters-react/build",
     "ignore": [
       "firebase.json",
@@ -7,7 +14,7 @@
       "**/node_modules/**"
     ]
   },
-
+  
   "database": {
     "rules": "database.rules.json"
   }

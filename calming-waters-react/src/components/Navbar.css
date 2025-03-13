@@ -49,8 +49,11 @@
     font-size: 18px; /* Adjust link size */
   }
   
+  
   .nav-logo {
     width: 50px;  /* Adjust size */
-    height: auto;  /* Maintain aspect ratio */
+    height: 50px; /* Make sure it's square to achieve a perfect circle */
     margin-right: 10px;  /* Space between logo and text */
-  }
+    border-radius: 5%; /* Makes the corners fully rounded */
+    object-fit: cover; /* Ensures the image scales properly within its bounds */
+}
