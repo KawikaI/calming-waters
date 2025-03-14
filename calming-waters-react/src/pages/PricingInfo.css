@@ -92,17 +92,16 @@
   }
 }
 
-/* Mobile Layout */
 @media (max-width: 768px) {
-  .pricing-box {
-    display: none !important; /* Hide desktop on mobile */
-  }
-
   .pricing-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Space between boxes */
+    gap: 20px; /* Space between the two boxes */
+  }
+
+  .old-pricing-box {
+    display: none !important; /* Hide the old pricing box on mobile */
   }
 
   /* Insurance Box */
@@ -141,17 +140,24 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
 
-  /* List Styling */
-  .mobile-pricing-box ul {
-    list-style-type: none;
+  /* Two-column Payment Methods for Mobile */
+  .payment-methods {
+    display: grid;
+    grid-template-columns: repeat(2, min-content); /* Makes columns as wide as content */
+    gap: 10px 40px; /* Adds spacing between columns */
     padding: 0;
     text-align: left;
+    justify-content: center; /* Centers the columns */
   }
 
-  .mobile-pricing-box li {
+  .payment-methods li {
+    list-style-type: none;
     font-size: 14px;
+    display: flex;
+    align-items: center; /* Ensures the checkmark aligns properly */
+    gap: 5px; /* Spaces the checkmark from the text */
+    white-space: nowrap; /* Prevents line breaks */
   }
 }
-
   
   
