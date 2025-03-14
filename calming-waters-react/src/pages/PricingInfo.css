@@ -1,5 +1,5 @@
 .pricing-box {
-  background: #f8f9fa;
+  background: #9f9fcf;
   border-radius: 10px;
   max-width: 800px;
   margin: auto;
@@ -106,7 +106,7 @@
 
   /* Insurance Box */
   .insurance-box {
-    background: #f8f9fa;
+    background: #9f9fcf;
     border-radius: 10px;
     width: 90%;
     max-width: 500px;
@@ -131,7 +131,7 @@
 
   /* Pricing Box */
   .mobile-pricing-box {
-    background: #f8f9fa;
+    background: #9f9fcf;
     border-radius: 10px;
     width: 90%;
     max-width: 500px;

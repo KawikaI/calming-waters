@@ -1,6 +1,6 @@
 
 .specialties-box {
-    background-color: #f8f9fa; /* Light grey background */
+    background-color: #9f9fcf; /* Light grey background */
     border-radius: 20px;
     padding: 40px;
     margin-top: 60px;
@@ -12,7 +12,7 @@
   
   /* Styling for each specialty tag */
   .specialty-badge {
-    background-color: #D3D3D3; /* Soft orange */
+    background-color: #ffffff;
     color: rgb(000, 0, 0);
     border-radius: 12px;
     font-size: 16px;

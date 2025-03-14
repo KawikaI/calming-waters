@@ -46,7 +46,7 @@
 /* Submit button */
 .schedule-form button {
     width: 100%;
-    background-color: #3498db; /* Vibrant Blue */
+    background-color: #E8A0BF; /* Vibrant Blue */
     color: white;
     padding: 12px;
     font-size: 16px;
@@ -57,7 +57,7 @@
 }
 
 .schedule-form button:hover {
-    background-color: #217dbb; /* Slightly Darker Blue */
+    background-color: #d08fab; /* Slightly Darker Blue */
 }
 
 /* Space between dropdown and submit button */
