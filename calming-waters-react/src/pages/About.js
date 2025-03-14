@@ -22,12 +22,25 @@ const credentials = [
   "National Certified Counselor certification (NCC)",
   "Certified Forensic Mental Health Evaluator (CFMHE)",
   "Licensed by State of Montana / BBH-LCPC-LIC-48659",
-  
- 
 ];
 
 const About = () => {
   const [selectedApproach, setSelectedApproach] = useState(null);
+  const [popupPosition, setPopupPosition] = useState({ top: 0, left: "50%" });
+
+  // Function to handle button click and set popup position
+  const handleClick = (event, approach) => {
+    const rect = event.target.getBoundingClientRect(); // Get button position
+    const isMobile = window.innerWidth <= 768; // Detect mobile
+  
+    setPopupPosition({
+      top: isMobile ? rect.bottom + window.scrollY + 10 : rect.top - 10, // Mobile: below button | Desktop: slight nudge up
+      left: isMobile ? "50%" : rect.left + rect.width / 2, // Mobile: center | Desktop: aligns with button
+      transform: isMobile ? "translateX(-50%)" : "translate(-50%, 10px)", // Adjust alignment
+    });
+  
+    setSelectedApproach(approach);
+  };
 
   return (
     <>
@@ -43,18 +56,16 @@ const About = () => {
         <div className="second-box">
           <h2>About</h2>
           <p>
-            I enjoy working with adolescents, adults, and families on the reservation. I have experience with trauma, self-harm, anxiety, depression, suicidal ideation, and grief and loss. I am an ally and work with the LGBTQIA community.</p>
-            <p>
-
+            I enjoy working with adolescents, adults, and families on the reservation. I have experience with trauma, self-harm, anxiety, depression, suicidal ideation, and grief and loss. I am an ally and work with the LGBTQIA community.
+          </p>
+          <p>
             I enjoy working with people and helping them through their darkest days, while celebrating their accomplishments and times of happiness! Therapy is not a one size fits all and I work toward individualizing my therapeutic approaches to meet the needs of each person.
-            </p>
-          
+          </p>
         </div>
 
         {/* Credentials Box */}
         <div className="fourth-box">
           <h2>Credentials</h2>
-          
           <ul className="credential-list">
             {credentials.map((credential, index) => (
               <li key={index}>{credential}</li>
@@ -71,7 +82,7 @@ const About = () => {
               <button
                 key={index}
                 className="therapy-item"
-                onClick={() => setSelectedApproach(approach)}
+                onClick={(event) => handleClick(event, approach)}
               >
                 {approach.name}
               </button>
@@ -80,7 +91,7 @@ const About = () => {
 
           {/* Pop-up Info Bubble */}
           {selectedApproach && (
-            <div className="info-popup">
+            <div className="info-popup" style={{ top: `${popupPosition.top}px`, left: popupPosition.left }}>
               <p>{selectedApproach.info}</p>
               <button className="close-btn" onClick={() => setSelectedApproach(null)}>Close</button>
             </div>

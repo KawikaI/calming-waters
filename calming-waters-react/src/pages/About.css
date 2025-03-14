@@ -11,15 +11,15 @@ html, body {
   justify-content: center; /* Ensures proper spacing */
   align-items: flex-start; /* Align to top */
   gap: 40px; /* Space between boxes */
-  min-height: 120vh; /* ⬅️ Increased height for more space */
-  padding-bottom: 300px; /* ⬅️ Push footer further down */
+  min-height: 120vh; /* Increased height for more space */
+  padding-bottom: 300px; /* Push footer further down */
 }
 
 /* First Box - Profile Image */
 .about-box {
   background: #e8a0bf; /* Soft Orchid Pink */
   padding: 40px;
-  border-radius: 30px; /* ⬅️ Increased for smoother corners */
+  border-radius: 30px;
   width: 300px;
   height: 400px;
   text-align: center;
@@ -27,11 +27,11 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* ⬅️ Slightly stronger shadow */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 180px;
   left: 100px;
-  overflow: hidden; /* ⬅️ Ensures no image overflow */
+  overflow: hidden;
 }
 
 /* Second Box */
@@ -43,14 +43,14 @@ html, body {
   height: 350px;
   text-align: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  position: relative; /* Allows independent positioning */
-  top: 150px; /* Move down */
-  left: 200px; /* Move right */
+  position: relative;
+  top: 150px;
+  left: 200px;
 }
 
 .second-box p {
-  margin-bottom: 15px; /* Adds space between paragraphs */
-  line-height: 1.6; /* Improves readability */
+  margin-bottom: 15px;
+  line-height: 1.6;
 }
 
 /* Third Box - Therapeutic Approaches */
@@ -58,9 +58,9 @@ html, body {
   background: #e4beff;
   padding: 40px;
   border-radius: 20px;
-  width: 750px; /* Slightly increased width */
-  height: auto; /* Auto height based on content */
-  min-height: 600px; /* Ensures enough space */
+  width: 750px;
+  height: auto;
+  min-height: 600px;
   text-align: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -72,7 +72,7 @@ html, body {
   justify-content: flex-start;
 }
 
-/* Third Box */
+/* Fourth Box */
 .fourth-box {
   background: #91dcef;
   padding: 40px;
@@ -81,9 +81,9 @@ html, body {
   height: 350px;
   text-align: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  position: relative; /* Allows independent positioning */
-  top: 200px; /* Move down */
-  left: -125px; /* Move right */
+  position: relative;
+  top: 200px;
+  left: -125px;
 }
 
 /* Therapeutic Approaches Section */
@@ -92,7 +92,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 90%; /* Ensures buttons stay inside the box */
+  width: 90%;
 }
 
 /* Therapy Buttons */
@@ -100,13 +100,13 @@ html, body {
   background: white;
   color: black;
   font-weight: bold;
-  padding: 10px 18px; /* Slightly reduced padding */
+  padding: 10px 18px;
   border-radius: 8px;
   border: 2px solid #ccc;
   cursor: pointer;
   transition: 0.3s;
-  width: 85%; /* Ensures buttons fit inside */
-  max-width: 500px; /* Prevents excessive width */
+  width: 85%;
+  max-width: 500px;
   text-align: center;
 }
 
@@ -122,23 +122,14 @@ html, body {
   padding-bottom: 350px;
 }
 
-/* Info Pop-up Box */
-.info-popup {
-  background: white;
-  color: black;
-  padding: 20px;
-  border-radius: 12px;
-  border: 3px solid #8a2be2; /* Purple border */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adds depth */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  max-width: 400px;
-  text-align: center;
+
+
+/* Ensures popup stays within the .third-box on desktop */
+.third-box {
+  position: relative;
 }
 
+/* Close Button */
 .close-btn {
   margin-top: 10px;
   padding: 5px 10px;
@@ -148,7 +139,7 @@ html, body {
   cursor: pointer;
 }
 
-
+/* Credential List */
 .credential-list {
   list-style: none;
   padding: 0;
@@ -178,3 +169,86 @@ html, body {
 }
 
 
+/* Default positioning for popup */
+.info-popup {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 12px;
+  border: 3px solid #8a2be2;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 1000;
+  max-width: 300px;
+  text-align: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Desktop Popup Adjustment */
+@media (min-width: 769px) {
+  .info-popup {
+    left: auto !important; /* Override previous left settings */
+    right: -70px; /* Move slightly to the left */
+    transform: translateX(-100%); /* Keep it aligned with button */
+  }
+}
+
+
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .about-box,
+  .second-box,
+  .third-box,
+  .fourth-box {
+    width: 90%;
+    max-width: 500px;
+    position: static;
+    height: auto;
+    min-height: unset;
+    margin-bottom: 20px;
+  }
+
+  .about-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .about-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .second-box p {
+    margin-bottom: 20px;
+  }
+
+  .therapy-list {
+    width: 100%;
+  }
+
+  .info-popup {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 300px;
+  }
+}
