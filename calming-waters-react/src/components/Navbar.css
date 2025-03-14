@@ -1,59 +1,143 @@
+/* 🔹 General Navbar Styling */
 .navbar-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar {
+  background-color: #E8A0BF !important; /* Force Soft Orchid Pink */
+  height: 80px; /* Adjust height */
+  padding: 10px 20px; /* Add spacing */
+  display: flex;
+  align-items: center; /* Vertically align items */
+  position: relative;
+}
+
+.navbar a {
+  font-size: 24px; /* Adjust size */
+  color: #333; /* Dark Gray for readability */
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #5C5470; /* Slightly darker muted purple */
+}
+
+/* 🔹 Brand & Logo */
+.navbar-brand {
+  font-size: 24px; /* Adjust text size */
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* Align text and logo */
+}
+
+.navbar-nav {
+  font-size: 18px; /* Adjust link size */
+}
+
+/* 🔹 Logo Styling */
+.nav-logo {
+  width: 50px; /* Adjust size */
+  height: 50px; /* Keep it square */
+  margin-right: 10px; /* Space between logo and text */
+  border-radius: 5%; /* Slightly rounded corners */
+  object-fit: cover; /* Ensure it scales properly */
+}
+
+
+
+
+/* 🔹 Hide dropdown on desktop */
+.dropdown-container {
+  display: none; /* Hide on larger screens */
+}
+
+/* 🔹 HIDE DROPDOWN ON DESKTOP */
+@media (min-width: 769px) {
+  .dropdown-container {
+    display: none !important; /* Hide dropdown on large screens */
   }
-  
-  .navbar ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navbar li {
-    display: inline;
-  }
-  
-  .navbar {
-    background-color: #E8A0BF !important; /* Force Soft Orchid Pink */
-    height: 80px; /* Adjust height */
-    padding: 10px 20px; /* Add spacing */
-    display: flex;
-    align-items: center; /* Vertically align items */
-  }
-  
-  .navbar a {
-    
-    font-size: 24px; /* Adjust size */
-    color: #333; /* Dark Gray for readability */
-    font-weight: bold;
-    padding: 8px 12px;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar a:hover {
-    color: #5C5470; /* Slightly darker muted purple */
-  }
-  
-  .navbar-brand {
-    font-size: 24px; /* Adjust text size */
-    font-weight: bold;
-    display: flex;
-    align-items: center; /* Align text and logo */
-  }
-  
+}
+
+/* 🔹 Mobile Styles - Show dropdown only on small screens */
+@media (max-width: 768px) {
+  /* Hide default navbar links on mobile */
   .navbar-nav {
-    font-size: 18px; /* Adjust link size */
+    display: none !important;
   }
-  
-  
-  .nav-logo {
-    width: 50px;  /* Adjust size */
-    height: 50px; /* Make sure it's square to achieve a perfect circle */
-    margin-right: 10px;  /* Space between logo and text */
-    border-radius: 5%; /* Makes the corners fully rounded */
-    object-fit: cover; /* Ensures the image scales properly within its bounds */
+
+  /* Ensure dropdown container is clickable */
+  .dropdown-container {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 9999; /* Ensure it's above everything */
+  }
+
+  /* Mobile Menu Button */
+  .dropdown-toggle {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: black;
+  }
+
+  /* Dropdown Menu */
+  .navbar-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none; /* Prevent interaction when hidden */
+  }
+
+  /* When dropdown is active */
+  .dropdown-container .navbar-dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* Dropdown Links */
+  .dropdown-item {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
 }
