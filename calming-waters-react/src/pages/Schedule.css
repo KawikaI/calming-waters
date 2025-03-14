@@ -72,3 +72,22 @@
 .schedule-form button {
     margin-bottom: 15px;
 }
+
+@media (max-width: 480px) {
+    .schedule-form {
+        max-width: 90%; /* Reduce max width to fit smaller screens */
+        padding: 20px; /* Reduce padding for a more compact look */
+    }
+
+    .schedule-form input,
+    .schedule-form textarea,
+    .schedule-form select {
+        padding: 10px; /* Reduce input padding */
+        font-size: 14px; /* Slightly smaller font for mobile */
+    }
+
+    .schedule-form button {
+        padding: 10px; /* Reduce button padding */
+        font-size: 14px; /* Slightly smaller text */
+    }
+}
