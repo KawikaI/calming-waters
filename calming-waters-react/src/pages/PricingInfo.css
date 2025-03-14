@@ -1,62 +1,157 @@
 .pricing-box {
-    background: #f8f9fa;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Title inside the box */
+.pricing-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.pricing-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.insurance-section,
+.pricing-section {
+  width: 45%;
+  text-align: left;
+}
+
+.divider {
+  width: 2px;
+  background: #ddd;
+  height: auto;
+  align-self: stretch;
+  margin: 0 20px;
+}
+
+/* Ensure both boxes have the same width */
+.pricing-box, .specialties-box {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+/* Remove bullets from the list */
+.pricing-section ul, .insurance-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Ensure the checkmarks still appear */
+.pricing-section li, .insurance-section li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+
+/* Desktop Layout */
+@media (min-width: 769px) {
+  .pricing-container {
     display: flex;
-    flex-direction: column; /* Keep it stacked */
+    flex-direction: column;
     align-items: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
   }
-  
-  /* Title inside the box */
-  .pricing-title {
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
+
   .pricing-content {
     display: flex;
-    width: 100%;
     justify-content: space-between;
+    width: 100%;
   }
-  
+
   .insurance-section,
   .pricing-section {
     width: 45%;
     text-align: left;
   }
-  
-  .divider {
-    width: 2px;
-    background: #ddd;
-    height: auto;
-    align-self: stretch;
-    margin: 0 20px;
+}
+
+/* Hide Mobile Layout on Desktop */
+@media (min-width: 769px) {
+  .insurance-box,
+  .mobile-pricing-box {
+    display: none !important; /* Hides mobile on desktop */
   }
-  
-  /* Ensure both boxes have the same width */
-  .pricing-box, .specialties-box {
-    width: 80%; /* Adjust as needed */
-    margin: 0 auto; /* Centers them */
-    max-width: 900px; /* Ensures they don't get too wide */
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .pricing-box {
+    display: none !important; /* Hide desktop on mobile */
   }
-  
-  /* Remove bullets from the list */
-  .pricing-section ul, .insurance-section ul {
-    list-style-type: none; /* Removes default bullets */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
-  }
-  
-  /* Ensure the checkmarks still appear */
-  .pricing-section li, .insurance-section li {
+
+  .pricing-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 8px; /* Adds spacing between the checkmark and text */
+    gap: 20px; /* Space between boxes */
   }
+
+  /* Insurance Box */
+  .insurance-box {
+    background: #f8f9fa;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Two-column insurance layout */
+  .insurance-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 20px;
+    text-align: left;
+    padding: 0;
+  }
+
+  .insurance-list li {
+    list-style-type: none;
+    font-size: 14px;
+  }
+
+  /* Pricing Box */
+  .mobile-pricing-box {
+    background: #f8f9fa;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* List Styling */
+  .mobile-pricing-box ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+  }
+
+  .mobile-pricing-box li {
+    font-size: 14px;
+  }
+}
+
+  
+  

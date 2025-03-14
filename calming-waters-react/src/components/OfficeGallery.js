@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 const images = [
   { src: "/calming-waters-pics/office1.jpeg", alt: "Office 1" },
   { src: "/calming-waters-pics/office2.jpeg", alt: "Office 2" },
