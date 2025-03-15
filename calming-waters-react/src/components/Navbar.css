@@ -19,7 +19,7 @@
 }
 
 .navbar {
-  background-color: #E8A0BF !important; /* Force Soft Orchid Pink */
+  background-color: #2c3e50 !important; /* Force Soft Orchid Pink */
   height: 80px; /* Adjust height */
   padding: 10px 20px; /* Add spacing */
   display: flex;
@@ -29,7 +29,7 @@
 
 .navbar a {
   font-size: 24px; /* Adjust size */
-  color: #333; /* Dark Gray for readability */
+  color: #ffffff; /* Dark Gray for readability */
   font-weight: bold;
   padding: 8px 12px;
   transition: color 0.3s ease;
