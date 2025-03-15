@@ -31,7 +31,7 @@ const Home = () => {
       <Navbar />
 
       <header className="text-white text-center py-5 App-header">
-  <h1 className="header-title">Calming Waters Counselling</h1>
+  <h1 className="header-title">Calming Waters Counseling</h1>
   <p className="header-subtitle">Let this be your guide to calm waters and inner peace</p>
 </header>
 

@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Phone Number */}
           <div className="contact-item">
             <span className="material-symbols-outlined">call</span>
-            <p>(406) 225-0746</p>
+            <p>(406) 260-1716</p>
           </div>
 
           {/* Email */}
