@@ -140,13 +140,14 @@ body {
 
   @media (max-width: 768px) {
     .profile-pic img {
-      width: 100%; /* Makes sure it scales within the container */
-      max-width: 250px; /* Limits size */
-      height: auto; /* Keeps aspect ratio */
+      width: 100%; /* Makes sure it scales */
+      max-width: 200px; /* Smaller for mobile */
+      height: auto; /* Maintain aspect ratio */
       display: block;
-      margin: 0 auto; /* Centers the image */
-      border-radius: 15px; /* Soft rounded corners */
-      object-fit: contain; /* Ensures it fully fits */
+      margin: 0 auto;
+      border-radius: 15px;
+      object-fit: contain; /* Ensures full visibility */
+  
     }
   }
 
@@ -156,6 +157,7 @@ body {
     max-width: 450px; /* Prevents text box from stretching */
     text-align: center;
     margin: 20px auto; /* Adds space between text & image */
+    
   }
   
 }

@@ -38,7 +38,15 @@ const Home = () => {
 <section className="profile-section container mt-5 d-flex align-items-center justify-content-center">
     {/* Profile Picture Placeholder */}
     <div className="profile-pic">
-        <img src="/calming-waters-pics/profile.jpeg" alt="Therapist Profile" />
+    <img 
+            src="/calming-waters-pics/profile.webp" 
+            alt="Therapist Profile"
+            width="250"
+            height="250"
+            loading="eager"
+            fetchpriority="high"
+        />
+        
     </div>
 
     {/* Skills Box */}

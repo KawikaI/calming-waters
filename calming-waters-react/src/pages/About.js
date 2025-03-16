@@ -50,6 +50,7 @@ const About = () => {
         {/* Profile Box */}
         <div className="about-box">
           <img src="/calming-waters-pics/profile2.jpg" alt="Therapist" className="profile-pic" />
+          
         </div>
 
         {/* About Box */}
