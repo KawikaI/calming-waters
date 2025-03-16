@@ -1,55 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- ✅ Preload critical image with high fetch priority -->
+    <link rel="preload" as="image" href="/calming-waters-pics/profile.webp" type="image/webp" fetchpriority="high">
 
-    <link rel="preload" as="image" href="/calming-waters-pics/profile-mobile.webp" media="(max-width: 768px)" type="image/webp">
-    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/Merriweather.woff2" type="font/woff2" crossorigin="anonymous">
-    
-    
-    
-      
+    <!-- ✅ Preload only the necessary font -->
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/merriweather/v28/Merriweather-Regular.woff2" type="font/woff2" crossorigin="anonymous">
 
-      <!-- SEO tags -->
-     <!-- SEO Meta Tags -->
-     <meta name="description" content="Find peace and clarity with Calming Waters Counseling in Montana. Professional therapy for individuals, couples, and families." />
-     <meta name="keywords" content="counseling, therapy, mental health, Montana, therapist, Calming Waters, mental wellness, couples therapy, family therapy" />
-     <meta name="author" content="Calming Waters Counseling" />
-     <meta name="robots" content="index, follow" />  <!-- ✅ Allows search engines to index & follow your site -->
+    <!-- ✅ Optimize preloading and loading of styles -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"></noscript>
 
+    <!-- ✅ Remove unnecessary Google Fonts to reduce blocking -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" /> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" /> -->
 
+    <!-- ✅ SEO Meta Tags -->
+    <meta name="description" content="Find peace and clarity with Calming Waters Counseling in Montana. Professional therapy for individuals, couples, and families." />
+    <meta name="keywords" content="counseling, therapy, mental health, Montana, therapist, Calming Waters, mental wellness, couples therapy, family therapy" />
+    <meta name="author" content="Calming Waters Counseling" />
+    <meta name="robots" content="index, follow" />
 
-
-    <!-- Open Graph Meta Tags (for social media and messaging previews) -->
+    <!-- ✅ Open Graph Meta Tags (for social media previews) -->
     <meta property="og:title" content="Calming Waters Counseling" />
     <meta property="og:description" content="Helping you find peace and clarity through therapy." />
     <meta property="og:image" content="https://calmingwatersmt.com/calming-waters-pics/logo.png" />
     <meta property="og:url" content="https://calmingwatersmt.com" />
-    <meta property="og:type" content="website" />  <!-- ✅ Ensures it's recognized as a website -->
+    <meta property="og:type" content="website" />
 
-    
-
-    <!-- Twitter Meta Tags -->
+    <!-- ✅ Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Calming Waters Counseling" />
     <meta name="twitter:description" content="Helping you find peace and clarity through therapy." />
     <meta name="twitter:image" content="https://calmingwatersmt.com/calming-waters-pics/logo.png" />
 
-    <!-- Character Set and Viewport -->
+    <!-- ✅ Essential Meta Tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffffff" />  <!-- ✅ Updated for better UX -->
-    <meta name="description" content="Helping you find peace and clarity through therapy." />
+    <meta name="theme-color" content="#ffffff" />
 
-    <!-- Favicon and Touch Icons -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />  <!-- ✅ Ensures correct favicon loading -->
+    <!-- ✅ Favicon and Touch Icons -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/calming-waters-pics/logo.png" />
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 
     <title>Calming Waters Counseling</title>
   </head>
@@ -58,3 +54,9 @@
     <div id="root"></div>
   </body>
 </html>
+
+
+
+
+
+

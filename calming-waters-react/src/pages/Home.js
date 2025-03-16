@@ -44,7 +44,7 @@ const Home = () => {
             width="250"
             height="250"
             loading="eager"
-            fetchpriority="high"
+            fetchPriority="high"
         />
         
     </div>
