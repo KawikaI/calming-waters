@@ -5,11 +5,11 @@ import "./About.css"; // Keep existing styles
 
 const therapyApproaches = [
   { name: "Cognitive Behavioral Therapy (CBT)", info: "Cognitive-behavioral therapy helps clients identify, test, and modify negative thoughts and behaviors." },
-  { name: "Art Therapy", info: "A creative process that helps individuals gain insight, cope with stress, and process trauma." },
-  { name: "Culturally Sensitive", info: "Culturally sensitive therapy adapts approaches to respect clients' cultural backgrounds and values." },
+  //{ name: "Art Therapy", info: "A creative process that helps individuals gain insight, cope with stress, and process trauma." },
+  //{ name: "Culturally Sensitive", info: "Culturally sensitive therapy adapts approaches to respect clients' cultural backgrounds and values." },
   { name: "Dialectical Behavior (DBT)", info: "DBT combines CBT with distress tolerance and mindfulness techniques." },
-  { name: "Mindfulness-Based (MBCT)", info: "MBCT blends cognitive therapy and mindfulness to help manage stress and anxiety." },
-  { name: "Multicultural", info: "Therapy that recognizes the experiences and values of minority groups, adapting to their unique needs." },
+  //{ name: "Mindfulness-Based (MBCT)", info: "MBCT blends cognitive therapy and mindfulness to help manage stress and anxiety." },
+  //{ name: "Multicultural", info: "Therapy that recognizes the experiences and values of minority groups, adapting to their unique needs." },
   { name: "Person-Centered", info: "A non-authoritative therapy where clients lead discussions to find their own solutions." },
   { name: "Solution Focused Brief (SFBT)", info: "Short-term therapy focused on achieving specific goals rather than past problems." },
   { name: "Strength-Based", info: "A positive approach that focuses on internal strengths and resourcefulness." },
@@ -17,7 +17,7 @@ const therapyApproaches = [
 ];
 
 const credentials = [
-  "Master of Science in Psychology (MS)",
+  "Master of Science in Clinical Mental Health Counseling (MS)",
   "Licensed Clinical Professional Counselor (LCPC)",
   "National Certified Counselor certification (NCC)",
   "Certified Forensic Mental Health Evaluator (CFMHE)",

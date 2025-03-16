@@ -19,8 +19,8 @@ const Home = () => {
   const specialties = [
     , "⭐Trauma and PTSD⭐", "⭐Depression⭐", "⭐Anxiety⭐","Obsessive-Compulsive (OCD)",
     "Anger Management", "Borderline Personality (BPD)", "Coping Skills", "Divorce", "Domestic Abuse", 
-"Domestic Violence", "Dual Diagnosis", "Emotional Disturbance", "Family Conflict", "Grief",
-"Life Transitions", "Parenting", "Peer Relationships", 
+"Domestic Violence", "Emotional Disturbance", "Family Conflict", "Grief",
+"Life Transitions", "Parenting", 
 "Relationship Issues", "Self Esteem", "Self-Harming", "Sexual Abuse", "Stress", 
 "Suicidal Ideation", "Transgender", "Veterans"
   ];
