@@ -17,7 +17,7 @@ html, body {
 
 /* First Box - Profile Image */
 .about-box {
-  background: #8fafd0; /* Soft Orchid Pink */
+  background: #8fafd0; /* Background color */
   padding: 40px;
   border-radius: 30px;
   width: 300px;
@@ -31,7 +31,16 @@ html, body {
   position: absolute;
   top: 180px;
   left: 100px;
-  overflow: hidden;
+  overflow: hidden; /* Prevents image from overflowing */
+}
+
+.about-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image scales properly */
+  border-radius: 20px; /* Matches box shape */
+  max-width: 260px; /* Ensures the image doesn’t overflow */
+  max-height: 360px; /* Ensures proper aspect ratio */
 }
 
 /* Second Box */
