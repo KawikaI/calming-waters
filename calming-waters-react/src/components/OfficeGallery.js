@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 
 const images = [
-  { src: "/calming-waters-pics/office1.jpeg", alt: "Office 1" },
-  { src: "/calming-waters-pics/office2.jpeg", alt: "Office 2" },
-  { src: "/calming-waters-pics/office3.jpeg", alt: "Office 3" },
-  { src: "/calming-waters-pics/office4.jpg", alt: "Office 4" },
+  { src: "/calming-waters-pics/office1.webp", alt: "Office 1" },
+  { src: "/calming-waters-pics/office2.webp", alt: "Office 2" },
+  { src: "/calming-waters-pics/office3.webp", alt: "Office 3" },
+  { src: "/calming-waters-pics/office4.webp", alt: "Office 4" },
 ];
 
 const OfficeGallery = () => {
