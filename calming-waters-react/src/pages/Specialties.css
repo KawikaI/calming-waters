@@ -6,6 +6,9 @@
     margin-top: 60px;
     margin-bottom: 150px !important; /* Force larger space */
     text-align: center;
+    width: 100%;
+   
+  
   }
 
   
@@ -35,6 +38,6 @@
       overflow-y: auto; /* Enables vertical scrolling */
       padding: 15px;
       border-radius: 12px;
-      width: 90%;
+      width: 97% !important;
     }
   }
